@@ -56,3 +56,28 @@ yarn ios
 - [x] Verify OTP
 - [x] Homescreen - Merchant list
 - [x] Profile Screen
+
+## Project Structure
+
+The project is organized into several directories, each serving a specific purpose:
+
+<pre>
+app
+├── core
+│   ├── assets          # Contains fonts, icons, and images used in the app
+│   ├── components      # Reusable UI components with corresponding tests
+│   ├── model           # TypeScript type definitions
+│   ├── navigation      # App navigation logic
+│   ├── schema          # Schema validation (e.g., for authentication)
+│   ├── services        # API services and integrations
+│   ├── store           # Redux slices and store configuration
+│   ├── theme           # App-wide styles and color definitions
+│   └── utils           # Utility functions
+└── presentation
+    ├── auth            # Authentication screens and components
+    ├── home            # Home screen and related components
+    ├── intro           # Introductory screens (e.g., splash screen)
+    └── profile         # Profile screen and components
+</pre>
+
+Each directory contains TypeScript and test files to ensure maintainable and scalable code.
