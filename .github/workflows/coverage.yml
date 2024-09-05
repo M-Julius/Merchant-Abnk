@@ -1,0 +1,15 @@
+name: Test Coverage
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm install
+      - name: Run Tests and Generate Coverage
+        run: npm run test -- --coverage
+      - name: Upload Coverage to Codecov
+        uses: codecov/codecov-action@v3
